@@ -14,10 +14,10 @@
 
 /* colores */
 .tarea-contenedor:nth-child(3n+1){
-    background-color: #1b1b32;
+    background-color: #100d33;
 }
 .tarea-contenedor:nth-child(3n+2){
-    background-color: #2a3a40;
+    background-color: #0d3949;
 }
 .tarea-contenedor:nth-child(3n+3){
     background-color: #3b3b4b;

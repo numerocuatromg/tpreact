@@ -12,7 +12,7 @@
     font-size: 18px;
     background-color: white;
     padding: 14px 32px 14px 16px;
-    border-radius: 2px solid #00471b;
+    border-radius: 2px solid #ff8097;
     outline:none;
 }
 
@@ -25,7 +25,7 @@
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     outline: none;
-    background: #00471b;
+    background: #ff8097;
     color: #fff ;
     text-transform: capitalize;
 
