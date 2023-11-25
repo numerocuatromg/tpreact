@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  
+  }
+  
+  html, body {
+    color:white;
+    background-color: #143c66;
+    margin-top: 40px;
+  }
+  .aplicacion-tareas{
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content:center;
+    align-items: center;
+  }
+
+  
+h1{
+    color:#143c66b0;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 25px 0;
+  }
+  
+  .tareas-lista-principal{
+    width: 600px;
+    min-height: 500px;
+    background-color: #FDD7E4;
+    padding: 25px;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 26px;
+  }
