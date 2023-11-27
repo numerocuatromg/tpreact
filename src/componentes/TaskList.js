@@ -17,6 +17,16 @@ function TaskList(){
         const tareasActualizadas = tareas.filter(tarea => tarea.id !==id);
         setTaskItem(tareasActualizadas);
     }
+
+    const completarTarea = id =>{
+        const tareasActualizadas = tareas.map(tarea => {
+            if (tarea.id == id){
+                tarea.completada = !tarea.completada;
+            }
+            return tarea;
+        });
+        setTaskItem(tareasActualizadas);
+    }
     return(
        <>
             <TaskForm onSubmit={agregarTarea} />
@@ -28,6 +38,7 @@ function TaskList(){
                     id={tarea.id} 
                     texto={tarea.texto}
                     completada={tarea.completada}
+                    completarTarea={completarTarea}
                     eliminarTarea= {eliminarTarea}
                     />
 
