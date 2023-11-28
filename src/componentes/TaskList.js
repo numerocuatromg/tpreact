@@ -23,13 +23,14 @@ function TaskList(){
         setTaskItem(tareasActualizadas);
     }
 
-    const completarTarea = id => {
+    const completarTarea = id =>{
         const tareasActualizadas = tareas.map(tarea => {
-            if (tarea.id === id) {
-                tarea.completada = !tarea.completada
-            } return tarea 
+            if (tarea.id == id){
+                tarea.completada = !tarea.completada;
+            }
+            return tarea;
         });
-        setTaskItem(tareasActualizadas)
+        setTaskItem(tareasActualizadas);
     }
 
     return(
