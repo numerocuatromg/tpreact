@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheet/TaskItem.css';
 import { RiDeleteBin6Fill } from "react-icons/ri";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 
 function TaskItem ({id, texto, completada, completarTarea, eliminarTarea}){
@@ -9,8 +10,13 @@ function TaskItem ({id, texto, completada, completarTarea, eliminarTarea}){
             className={completada ? 'tarea-contenedor completada' : 'tarea-contenedor'}>
             <div 
                 className='tarea-texto'
-                onClick={()=> completarTarea(id)} >
+                  >
                 {texto}
+            </div>
+            <div 
+                className='tarea-contenedor-iconos'
+                onClick={()=> completarTarea(id)} >
+                <FaRegCircleCheck className='tarea-icono' />
             </div>
             <div 
                 className='tarea-contenedor-iconos'
