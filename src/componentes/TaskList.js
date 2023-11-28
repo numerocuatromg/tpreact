@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import TaskForm from "./TaskForm";
 import TaskItem from "./TaskItem";
 
@@ -8,15 +8,30 @@ function TaskList(){
     const agregarTarea = tarea => {
         if (tarea.texto.trim()){
             tarea.texto = tarea.texto.trim();
-            const tareasActualizadas= [tarea, ...tareas];
+            const tareasActualizadas= [...tareas, tarea];
             setTaskItem(tareasActualizadas);
+            localStorage.setItem(tarea.id, tarea.texto);
         }
     }
-
+    
+    useEffect(() => {
+        localStorage.setItem('tareas', JSON.stringify('tareas'))
+    }, [ tareas ]); 
+    
     const eliminarTarea = id => {
         const tareasActualizadas = tareas.filter(tarea => tarea.id !==id);
         setTaskItem(tareasActualizadas);
     }
+
+    const completarTarea = id => {
+        const tareasActualizadas = tareas.map(tarea => {
+            if (tarea.id === id) {
+                tarea.completada = !tarea.completada
+            } return tarea 
+        });
+        setTaskItem(tareasActualizadas)
+    }
+
     return(
        <>
             <TaskForm onSubmit={agregarTarea} />
@@ -28,6 +43,7 @@ function TaskList(){
                     id={tarea.id} 
                     texto={tarea.texto}
                     completada={tarea.completada}
+                    completarTarea={completarTarea}
                     eliminarTarea= {eliminarTarea}
                     />
 

@@ -14,12 +14,12 @@ function TaskForm(props) {
         e.preventDefault();
         const tareaNueva = {
             id: uuidv4(),
-            texto:input,
+            texto: input,
             completado: false
         }
         props.onSubmit(tareaNueva);
     }
-
+    
     return (
         <form className="tarea-formulario"
         onSubmit={ManejarEnvio} >
