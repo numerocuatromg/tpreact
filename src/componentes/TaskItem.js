@@ -8,9 +8,7 @@ function TaskItem ({id, texto, completada, completarTarea, eliminarTarea}){
     return (
         <div 
             className={completada ? 'tarea-contenedor completada' : 'tarea-contenedor'}>
-            <div 
-                className='tarea-texto'
-                  >
+            <div className='tarea-texto'>
                 {texto}
             </div>
             <div 
